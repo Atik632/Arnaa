@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Arna 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdce0, #f5e6ff, #ffe4f0);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #ff85a2;
+      color: white;
+      font-size: 2.7em;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .photos img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #fff0f5;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .message {
+      font-size: 1.6em;
+      color: #5a2a43;
+      margin: 30px auto;
+      max-width: 700px;
+      background: rgba(255, 240, 250, 0.9);
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1.2em;
+      margin: 12px;
+      color: white;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 35px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .memory {
+      margin-top: 30px;
+    }
+
+    p {
+      padding: 10px;
+      font-size: 1.1em;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p>By Atik</p>
+
+  <header>💖 For My Arna 💖</header>
+
+  <!-- Two photos -->
+  <div class="photos">
+    <img src="WhatsApp Image 2025-05-14 at 21.17.12_6b07d48b.jpg" alt="Arna Photo 1">
+    <img src="WhatsApp Image 2025-05-14 at 21.17.28_0bcf9764.jpg" alt="Arna Photo 2">
+  </div>
+
+  <div class="content">
+    <div class="message">
+      Arna, you are the most beautiful part of my life.  
+      Every moment with you is like a dream I never want to end.  
+      This website is a small piece of my heart for you. 💌
+    </div>
+
+    <button class="btn" onclick="showLove()">Click Here, My Love 💘</button>
+    <button class="btn" onclick="sendKiss()">Send a Kiss 💋</button>
+    <button class="btn" onclick="showMessage()">A Message for You 💬</button>
+    <button class="btn" onclick="whyLove()">Why I Love You 💖</button>
+
+    <div class="memory">
+      <button class="btn" onclick="showMemory()">Special Memory 💞</button>
+    </div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    function showLove() {
+      alert("I love you, Arna! 💖 Forever and always.");
+    }
+
+    function sendKiss() {
+      alert("Muaaah! 😘 A sweet kiss just for you, meri jaan Arna.");
+    }
+
+    function showMessage() {
+      alert("You are my sunshine, my peace, and my biggest blessing. 🌈🕊️");
+    }
+
+    function whyLove() {
+      alert("Because you’re caring, funny, beautiful, and mine 💕.");
+    }
+
+    function showMemory() {
+      alert("Remember the night we talked endlessly about dreams and laughed at silly things? I could relive that moment forever. 💫");
+    }
+
+    // Floating hearts
+    const heartContainer = document.getElementById('hearts');
+    for (let i = 0; i < 50; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heartContainer.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
